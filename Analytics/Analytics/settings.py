@@ -79,8 +79,18 @@ WSGI_APPLICATION = 'Analytics.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = SERVER_DATABASE
+#DATABASES = SERVER_DATABASE
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 't2',
+        'USER': 'root',
+        'PASSWORD': 'distro',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
