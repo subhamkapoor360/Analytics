@@ -1,0 +1,55 @@
+qwertyuiop
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" 
+         src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+      <script type = "text/javascript">
+         $(document).ready(function() {
+          var x,y;
+      var req=$.ajax({
+                     type:"POST",
+                     url:"/registeruser/",
+                     contentType: "application/x-www-form-urlencoded",
+                     dataType:'json',
+                     data: {
+                           'name': $('#name').val(),
+                           'userId': $('#username').val(),
+                           'password': $('#password').val(),
+                           'gender': $('#gender').val(),
+                           'mobileNo': $('#mobileno').val(),
+                           'emailId': $('#email').val(),
+                           },
+                     success:function(response){
+                         x=response.resCode;
+                         y=response.resStr;
+                         console.log(x);
+                     }      
+                    });
+            return false; //<---- move it here
+       });
+
+</script>   
+</head>
+   
+<body>
+<form method="POST" id="register">
+  Name:<br>
+  <input type="text" id="name"><br>
+  Username:<br>
+  <input type="text" id="username"><br>
+  password:<br>
+  <input type="password" id="password"><br>
+  Gender:<br>
+  <input type="text" id="gender"><br>
+  Mobile no:<br>
+  <input type="text" id="mobileno"><br>
+  Email:<br>
+  <input type="text" id="email"><br>
+  <input type="submit" value="submit"><br>
+</form>
+
+   </body>
+   
+</html>
