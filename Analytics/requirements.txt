@@ -48,7 +48,7 @@ pyexcel==0.2.0
 pyexcel-io==0.1.0
 pyexcel-xls==0.1.0
 pyexcel-xlsx==0.1.0
-Pygments==2.1.1
+Pygments==2.7.4
 pystache==0.5.4
 pytest==2.8.7
 pytz==2015.7
