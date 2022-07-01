@@ -33,7 +33,7 @@ kombu==3.0.33
 Markdown==2.6.5
 MarkupSafe==0.23
 MySQL-python==1.2.5
-openpyxl==2.2.2
+openpyxl==2.4.2
 path.py==8.1.2
 pathlib==1.0.1
 pep8==1.7.0
